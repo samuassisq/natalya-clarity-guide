@@ -50,7 +50,9 @@ function PropertyDetailPage() {
 
   const onTouchEnd = (event: React.TouchEvent) => {
     if (touchStart.current === null) return;
-    const delta = event.changedTouches[0].clientX - touchStart.current;
+    const touch = event.changedTouches.item(0);
+    if (!touch) return;
+    const delta = touch.clientX - touchStart.current;
     if (Math.abs(delta) > 45) move(delta > 0 ? -1 : 1);
     touchStart.current = null;
   };
@@ -64,7 +66,7 @@ function PropertyDetailPage() {
         </section>
 
         <section className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8 lg:px-12">
-          <div className="relative" onTouchStart={(event) => { touchStart.current = event.touches[0].clientX; }} onTouchEnd={onTouchEnd}>
+          <div className="relative touch-pan-y" onTouchStart={(event) => { const touch = event.touches.item(0); touchStart.current = touch?.clientX ?? null; }} onTouchEnd={onTouchEnd}>
             <PropertyVisual label={property.gallery[active]?.label ?? "Foto do imóvel"} className="aspect-[4/3] max-h-[720px] md:aspect-[16/9]" />
             <Button variant="heroGhost" size="icon" className="absolute left-3 top-1/2 -translate-y-1/2" aria-label="Foto anterior" onClick={() => move(-1)}><ChevronLeft aria-hidden="true" /></Button>
             <Button variant="heroGhost" size="icon" className="absolute right-3 top-1/2 -translate-y-1/2" aria-label="Próxima foto" onClick={() => move(1)}><ChevronRight aria-hidden="true" /></Button>
