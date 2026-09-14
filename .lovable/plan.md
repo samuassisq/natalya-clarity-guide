@@ -1,0 +1,39 @@
+# Site institucional — Natalia Heiderich
+
+## Objetivo
+Construir um site editorial, sofisticado e acolhedor que apresente Natalia como profissional do mercado imobiliário, consultora e formadora, conduzindo cada interesse para uma conversa contextualizada no WhatsApp.
+
+## Direção visual
+- Aplicar a paleta fornecida em tons de marfim, grafite, bege e dourado discreto, sempre por meio de tokens semânticos.
+- Usar Fraunces nos títulos e Work Sans em textos e controles.
+- Criar composição editorial com respiro amplo, linhas finas, imagens arquitetônicas e profissionais, cantos discretos e movimento sutil.
+- Gerar imagens originais e coerentes entre si para evitar aparência genérica de banco de imagens.
+- Preservar contraste, foco visível, navegação por teclado e boa leitura em celular, tablet e desktop.
+
+## Etapa 1 — Página inicial completa
+- Criar cabeçalho responsivo com assinatura tipográfica, navegação completa, menu móvel e acesso ao WhatsApp.
+- Construir a primeira dobra com a mensagem “Clareza para decidir. Segurança para avançar.”, imagem marcante e dois caminhos principais.
+- Montar as seções de posicionamento, apresentação da Natalia, três áreas de atuação, compra e venda, consultorias, mentoria, curso, depoimentos identificados como placeholders, CTA final e rodapé.
+- Usar apenas afirmações fornecidas; nenhuma credencial, número, resultado ou contato será inventado.
+
+## Etapa 2 — Páginas internas
+- Criar `/sobre`, `/imoveis`, `/imoveis/$slug`, `/colunas`, `/colunas/$slug`, `/consultorias`, `/mentoria`, `/curso` e `/contato`.
+- Manter a mesma linguagem visual e navegação em todas as páginas.
+- Preparar imóveis e artigos demonstrativos, claramente rotulados, com páginas de detalhe reutilizáveis.
+- Exibir aviso informativo em conteúdos relacionados a legislação.
+- Criar a página de contato com resumo dos serviços, opções contextuais de WhatsApp e formulário visual claramente marcado como pendente de integração.
+
+## Conversão e conteúdo
+- Centralizar o número oficial e todas as mensagens em uma função reutilizável `createWhatsAppLink(message)`.
+- Codificar corretamente as mensagens, abrir os links em nova aba com segurança e personalizar cada chamada conforme a seção.
+- Não adicionar e-mail, endereço, CRECI, redes sociais, preços, datas, vagas ou outras informações não fornecidas.
+- Identificar explicitamente imóveis, artigos e depoimentos não confirmados como demonstrativos ou placeholders.
+
+## Estrutura técnica
+- Criar componentes reutilizáveis para cabeçalho, rodapé, títulos de seção, chamadas, cards e links de WhatsApp.
+- Usar rotas nativas do projeto e metadados únicos por página: título, descrição, Open Graph e Twitter Card.
+- Adicionar estados de interação, menu móvel acessível e animações leves com respeito à preferência de movimento reduzido.
+- Validar links, navegação, visual em desktop e celular, ausência de sobreposições e carregamento das imagens.
+
+## Resultado esperado
+Um site completo, confiável e estrategicamente organizado, com a página inicial como referência de acabamento e todas as páginas internas coerentes com a mesma identidade.
