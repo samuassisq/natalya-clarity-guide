@@ -13,7 +13,8 @@ Construir um site editorial, sofisticado e acolhedor que apresente Natalia como 
 ## Etapa 1 — Página inicial completa
 - Criar cabeçalho responsivo com assinatura tipográfica, navegação completa, menu móvel e acesso ao WhatsApp.
 - Construir a primeira dobra com a mensagem “Clareza para decidir. Segurança para avançar.”, imagem marcante e dois caminhos principais.
-- Montar as seções de posicionamento, apresentação da Natalia, três áreas de atuação, compra e venda, consultorias, mentoria, curso, depoimentos identificados como placeholders, CTA final e rodapé.
+- Organizar a jornada por intenção em “Como posso ajudar você?”, com oito caminhos: compra ou venda, proprietários, processos empresariais, carreira, Mentoria Premium, Consultoria Premium, Consultoria Rápida e curso gravado. Cada opção terá destino e mensagem de WhatsApp próprios.
+- Montar as seções de posicionamento, apresentação da Natalia, três áreas de atuação, compra e venda, consultorias, mentoria, curso, depoimentos identificados como placeholders, perguntas frequentes, CTA final e rodapé.
 - Usar apenas afirmações fornecidas; nenhuma credencial, número, resultado ou contato será inventado.
 
 ## Etapa 2 — Páginas internas
@@ -22,10 +23,12 @@ Construir um site editorial, sofisticado e acolhedor que apresente Natalia como 
 - Preparar imóveis e artigos demonstrativos, claramente rotulados, com páginas de detalhe reutilizáveis.
 - Exibir aviso informativo em conteúdos relacionados a legislação.
 - Criar a página de contato com resumo dos serviços, opções contextuais de WhatsApp e formulário visual claramente marcado como pendente de integração.
+- Não implementar login, administração, pagamentos, agendamento, área de alunos, CRM, banco complexo ou integrações externas nesta versão; manter os conteúdos preparados para futuras fontes de dados.
 
 ## Conversão e conteúdo
-- Centralizar o número oficial e todas as mensagens em uma função reutilizável `createWhatsAppLink(message)`.
+- Centralizar o número oficial e todas as mensagens em uma única configuração, consumida pela função reutilizável `createWhatsAppLink(message)`.
 - Codificar corretamente as mensagens, abrir os links em nova aba com segurança e personalizar cada chamada conforme a seção.
+- Testar cada botão individualmente para confirmar número, texto pré-preenchido e contexto.
 - Não adicionar e-mail, endereço, CRECI, redes sociais, preços, datas, vagas ou outras informações não fornecidas.
 - Identificar explicitamente imóveis, artigos e depoimentos não confirmados como demonstrativos ou placeholders.
 
