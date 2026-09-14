@@ -1,16 +1,16 @@
 # Roadmap
 
 ## Etapa atual — somente página inicial
-- [ ] Construir e refinar a página inicial completa com DM Serif Display e Manrope
-- [ ] Substituir imagens artificiais da Natalia pelas fotos oficiais enviadas
-- [ ] Incorporar a identidade e seção EMINÉ com o logotipo oficial
-- [ ] Adicionar “Como posso ajudar você?” com oito intenções e destinos contextuais
-- [ ] Centralizar número e mensagens do WhatsApp em configuração reutilizável
-- [ ] Adicionar FAQ sobre serviços e primeiro contato
-- [ ] Testar individualmente todos os links e mensagens de WhatsApp
-- [ ] Validar menu mobile, desktop, tablet e celular
-- [ ] Validar contraste, teclado, textos, sobreposições e proporção das imagens
-- [ ] Validar SEO e metadados da home
+- [x] Construir e refinar a página inicial completa com DM Serif Display e Manrope
+- [x] Substituir imagens artificiais da Natalia pelas fotos oficiais enviadas
+- [x] Incorporar a identidade e seção EMINÉ com o logotipo oficial
+- [x] Adicionar “Como posso ajudar você?” com oito intenções e destinos contextuais
+- [x] Centralizar número e mensagens do WhatsApp em configuração reutilizável
+- [x] Adicionar FAQ sobre serviços e primeiro contato
+- [x] Testar individualmente todos os links e mensagens de WhatsApp
+- [x] Validar menu mobile, desktop, tablet e celular
+- [x] Validar contraste, teclado, textos, sobreposições e proporção das imagens
+- [x] Validar SEO e metadados da home
 - [ ] Apresentar resumo e aguardar aprovação
 
 ## Etapa posterior — bloqueada pela aprovação da home
