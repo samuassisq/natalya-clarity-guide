@@ -5,8 +5,8 @@ import heroAsset from "@/assets/natalia-hero.png.asset.json";
 import portraitAsset from "@/assets/natalia-sobre.png.asset.json";
 import courseAsset from "@/assets/natalia-curso.png.asset.json";
 import emineLogoAsset from "@/assets/emine-logo-claro.png.asset.json";
-import consultingImage from "@/assets/natalia-consultoria.jpg";
-import mentoringImage from "@/assets/natalia-mentoria.jpg";
+import consultingAsset from "@/assets/natalia-consultorias.png.asset.json";
+import mentoringAsset from "@/assets/natalia-mentoria.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -107,7 +107,7 @@ function Index() {
         <section id="imoveis" className="bg-card py-20 md:py-28">
           <div className="mx-auto grid max-w-[1240px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-12">
             <div><SectionLabel>Compra e venda</SectionLabel><h2 className="mt-6 text-4xl leading-tight sm:text-5xl">Decisões importantes pedem uma condução <span className="italic text-accent">atenta.</span></h2><p className="mt-7 text-base leading-8 text-muted-foreground">Da organização documental à comunicação entre as partes, o atendimento acompanha cada etapa com proximidade, método e clareza — tanto para quem compra quanto para quem vende.</p><ul className="mt-7 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">{["Compra de imóveis", "Venda de imóveis", "Organização documental", "Comunicação entre as partes", "Orientação durante o processo", "Segurança nas decisões"].map((item) => <li key={item} className="flex gap-3"><Check className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />{item}</li>)}</ul><WhatsAppLink message={whatsappMessages.property} className="mt-9">Quero conversar sobre meu imóvel</WhatsAppLink></div>
-            <img src={consultingImage} width={1200} height={912} loading="lazy" alt="Atendimento demonstrativo com análise de documentos e planta de imóvel" className="aspect-[4/3] w-full object-cover" />
+            <img src={consultingAsset.url} width={768} height={1019} loading="lazy" alt="Natalia Heiderich com computador e materiais profissionais" className="aspect-[4/3] w-full object-cover object-top" />
           </div>
         </section>
 
@@ -132,7 +132,7 @@ function Index() {
 
         <section id="mentoria" className="bg-card">
           <div className="grid lg:grid-cols-2">
-            <img src={mentoringImage} width={1200} height={912} loading="lazy" alt="Sessão demonstrativa de mentoria para profissionais do mercado imobiliário" className="h-full min-h-[420px] w-full object-cover" />
+            <img src={mentoringAsset.url} width={768} height={1019} loading="lazy" alt="Natalia Heiderich em retrato profissional de corpo inteiro" className="h-full min-h-[420px] w-full object-cover object-top" />
             <div className="flex items-center px-5 py-16 sm:px-10 lg:px-16 lg:py-24"><div className="max-w-xl"><SectionLabel>Mentoria Premium</SectionLabel><h2 className="mt-6 text-4xl leading-tight sm:text-5xl">Do improviso à visão completa do <span className="italic text-accent">processo.</span></h2><p className="mt-7 text-base leading-8 text-muted-foreground">Um acompanhamento ao longo de meses para corretores que desejam desenvolver autonomia e compreender o processo imobiliário de ponta a ponta — da captação ao relacionamento de longo prazo.</p><div className="mt-7 grid grid-cols-2 gap-3 text-sm text-muted-foreground">{["Visão de processo", "Autonomia", "Organização", "Comunicação segura", "Captação", "Relacionamento"].map((item) => <span key={item} className="flex gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}</div><p className="mt-7 text-sm italic text-muted-foreground">Consulte as condições da próxima turma.</p><WhatsAppLink message={whatsappMessages.mentoring} className="mt-7">Quero saber mais sobre a mentoria</WhatsAppLink></div></div>
           </div>
         </section>
@@ -192,9 +192,9 @@ const areas: ReadonlyArray<readonly [string, string, string, string, string]> = 
 ];
 
 const propertyCards = [
-  { title: "Residência contemporânea", image: consultingImage },
-  { title: "Arquitetura integrada", image: mentoringImage },
-  { title: "Interiores com luz natural", image: consultingImage },
+  { title: "Residência contemporânea", image: consultingAsset.url },
+  { title: "Arquitetura integrada", image: mentoringAsset.url },
+  { title: "Interiores com luz natural", image: consultingAsset.url },
 ];
 
 const faqs = [
