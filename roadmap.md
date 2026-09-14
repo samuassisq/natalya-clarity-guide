@@ -1,4 +1,4 @@
-- [ ] Reorganizar e condensar a home na ordem solicitada
+- [ ] Reorganizar e condensar a home na ordem solicitada usando apenas fotos oficiais
 - [ ] Criar /imoveis com filtros funcionais e conteúdo demonstrativo identificado
 - [ ] Criar /imoveis/$slug com galeria, swipe, lightbox e WhatsApp contextual
 - [ ] Atualizar navegação, estados ativos, interações e links internos
