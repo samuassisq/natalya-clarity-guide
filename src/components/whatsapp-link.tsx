@@ -22,7 +22,7 @@ export function WhatsAppLink({
 }: WhatsAppLinkProps) {
   return (
     <Button asChild variant={variant} size={size} className={className}>
-      <a href={createWhatsAppLink(message)} target="_blank" rel="noreferrer">
+      <a href={createWhatsAppLink(message)} target="_blank" rel="noopener noreferrer">
         {children}
         {showArrow ? <ArrowUpRight aria-hidden="true" /> : null}
       </a>

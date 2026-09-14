@@ -11,6 +11,7 @@ const navigation = [
   ["Consultorias", "#consultorias"],
   ["Mentoria", "#mentoria"],
   ["Curso", "#curso"],
+  ["EMINÉ", "#emine"],
   ["Contato", "#contato"],
 ] as const;
 

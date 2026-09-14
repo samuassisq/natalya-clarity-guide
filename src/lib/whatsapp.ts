@@ -9,6 +9,8 @@ export const whatsappMessages = {
     "Olá, Natalia! Gostaria de conversar sobre compra, venda ou orientação relacionada a um imóvel.",
   owners:
     "Olá, Natalia! Sou proprietário(a) e gostaria de saber como funciona o seu atendimento para imóveis.",
+  enterprise:
+    "Olá, Natalia! Gostaria de conversar sobre uma demanda empresarial relacionada ao mercado imobiliário.",
   premiumConsulting:
     "Olá, Natalia! Gostaria de saber mais sobre a Consultoria Premium para empresas e profissionais do mercado imobiliário.",
   quickConsulting:
@@ -18,7 +20,7 @@ export const whatsappMessages = {
   course:
     "Olá, Natalia! Gostaria de saber mais sobre o curso gravado de locação e administração imobiliária.",
   career:
-    "Olá, Natalia! Gostaria de saber mais sobre suas opções de formação profissional.",
+    "Olá, Natalia! Gostaria de conversar sobre desenvolvimento profissional e carreira no mercado imobiliário.",
   consulting:
     "Olá, Natalia! Gostaria de conhecer melhor as opções de consultoria.",
   columns:

@@ -18,7 +18,8 @@ export function SiteFooter() {
             <div className="grid grid-cols-2 gap-x-5 gap-y-3 text-sm text-primary-foreground/75">
               <a href="#sobre">Sobre</a><a href="#imoveis">Imóveis</a>
               <a href="#consultorias">Consultorias</a><a href="#mentoria">Mentoria</a>
-              <a href="#curso">Curso</a><a href="#faq">Dúvidas</a>
+               <a href="#curso">Curso</a><a href="#emine">EMINÉ</a>
+               <a href="#faq">Dúvidas</a><a href="#contato">Contato</a>
             </div>
           </div>
           <div>
