@@ -7,6 +7,7 @@ import courseAsset from "@/assets/natalia-curso.png.asset.json";
 import emineLogoAsset from "@/assets/emine-logo-claro.png.asset.json";
 import consultingAsset from "@/assets/natalia-consultorias.png.asset.json";
 import mentoringAsset from "@/assets/natalia-mentoria.png.asset.json";
+import demonstrativeArchitecture from "@/assets/natalia-hero-architecture.jpg";
 import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -192,9 +193,9 @@ const areas: ReadonlyArray<readonly [string, string, string, string, string]> = 
 ];
 
 const propertyCards = [
-  { title: "Residência contemporânea", image: consultingAsset.url },
-  { title: "Arquitetura integrada", image: mentoringAsset.url },
-  { title: "Interiores com luz natural", image: consultingAsset.url },
+  { title: "Residência contemporânea", image: demonstrativeArchitecture },
+  { title: "Arquitetura integrada", image: demonstrativeArchitecture },
+  { title: "Interiores com luz natural", image: demonstrativeArchitecture },
 ];
 
 const faqs = [
