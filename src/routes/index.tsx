@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Check, ChevronDown, MessageCircle } from "lucide-react";
+import { ArrowDown, Check, ChevronDown, MessageCircle } from "lucide-react";
 import * as Accordion from "@radix-ui/react-accordion";
-import heroImage from "@/assets/natalia-hero-architecture.jpg";
-import portraitImage from "@/assets/natalia-portrait-placeholder.jpg";
+import heroAsset from "@/assets/natalia-hero.png.asset.json";
+import portraitAsset from "@/assets/natalia-sobre.png.asset.json";
+import courseAsset from "@/assets/natalia-curso.png.asset.json";
+import emineLogoAsset from "@/assets/emine-logo-claro.png.asset.json";
 import consultingImage from "@/assets/natalia-consultoria.jpg";
 import mentoringImage from "@/assets/natalia-mentoria.jpg";
 import { Button } from "@/components/ui/button";
@@ -19,10 +21,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Natalia Heiderich | Mercado Imobiliário e Mentoria" },
       { property: "og:description", content: "Clareza para decidir. Segurança para avançar no mercado imobiliário." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://natalya-clarity-guide.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://natalya-clarity-guide.lovable.app/" }],
   }),
   component: Index,
 });
@@ -33,13 +35,13 @@ function Index() {
       <SiteHeader />
       <main>
         <section className="relative min-h-[760px] overflow-hidden bg-foreground text-hero-foreground md:min-h-[820px]">
-          <img src={heroImage} width={1440} height={1600} alt="Interior contemporâneo com luz natural e arquitetura elegante" className="absolute inset-0 size-full object-cover object-[62%_55%]" fetchPriority="high" />
+          <img src={heroAsset.url} width={768} height={1019} alt="Natalia Heiderich em retrato profissional" className="absolute inset-0 size-full object-cover object-[58%_25%] md:object-[72%_20%]" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay via-hero-overlay/65 to-transparent" />
           <div className="relative mx-auto flex min-h-[760px] max-w-[1440px] items-end px-5 pb-20 pt-32 sm:px-8 md:min-h-[820px] md:pb-24 lg:px-12">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-warm">Mercado imobiliário · Consultoria · Formação</p>
               <h1 className="text-[clamp(3.25rem,7vw,7.6rem)] leading-[0.92]">Clareza para decidir.<br /><span className="italic text-warm">Segurança</span> para avançar.</h1>
-              <p className="mt-7 max-w-xl text-base leading-7 text-hero-foreground/80 sm:text-lg">Experiência, estratégia e orientação para quem deseja comprar, vender, administrar ou se desenvolver no mercado imobiliário.</p>
+              <p className="mt-7 max-w-xl text-base leading-7 text-hero-foreground/80 sm:text-lg">Uma atuação que une experiência no mercado imobiliário, estratégia, orientação e desenvolvimento profissional.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="hero" size="lg"><a href="#sobre">Conheça meu trabalho <ArrowDown aria-hidden="true" /></a></Button>
                 <WhatsAppLink message={whatsappMessages.general} variant="gold">Fale comigo</WhatsAppLink>
@@ -52,8 +54,8 @@ function Index() {
           <div className="mx-auto grid max-w-[1240px] gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-12">
             <SectionLabel>Uma atuação que organiza</SectionLabel>
             <div>
-              <h2 className="max-w-4xl text-4xl leading-tight sm:text-5xl lg:text-6xl">O mercado imobiliário pode ser mais <span className="italic text-accent">claro, organizado e seguro.</span></h2>
-              <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground">Entre documentos, contratos, negociações, clientes e decisões importantes, ter orientação faz toda a diferença. Meu trabalho é simplificar processos, compartilhar conhecimento e ajudar pessoas e profissionais a avançarem com mais segurança.</p>
+              <h2 className="max-w-4xl text-4xl leading-tight sm:text-5xl lg:text-6xl">Conduzir é mais do que <span className="italic text-accent">intermediar.</span></h2>
+              <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground">No mercado imobiliário, cada decisão envolve patrimônio, expectativas, documentos, pessoas e confiança. Por isso, o trabalho de Natalia parte de uma premissa simples: clareza antes da decisão e segurança durante o caminho.</p>
             </div>
           </div>
         </section>
@@ -61,14 +63,14 @@ function Index() {
         <section id="sobre" className="bg-card py-20 md:py-28">
           <div className="mx-auto grid max-w-[1240px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
             <figure className="relative mx-auto max-w-lg">
-              <img src={portraitImage} width={1200} height={1504} loading="lazy" alt="Imagem demonstrativa para futura foto profissional de Natalia Heiderich" className="aspect-[4/5] w-full object-cover" />
-              <figcaption className="absolute bottom-0 left-0 bg-background px-4 py-2 text-[0.65rem] uppercase tracking-[0.12em] text-muted-foreground">Imagem demonstrativa</figcaption>
+              <img src={portraitAsset.url} width={768} height={1019} loading="lazy" alt="Natalia Heiderich sorrindo em retrato profissional em preto e branco" className="aspect-[4/5] w-full object-cover object-top" />
             </figure>
             <div>
               <SectionLabel>Sobre Natalia</SectionLabel>
-              <h2 className="mt-6 text-4xl leading-tight sm:text-5xl">Experiência prática, método e uma forma <span className="italic text-accent">próxima</span> de orientar.</h2>
-              <p className="mt-7 text-base leading-8 text-muted-foreground">Minha atuação reúne experiência prática no mercado imobiliário, conhecimento dos processos de locação e administração e dedicação à formação de profissionais mais preparados, autônomos e seguros para atuar.</p>
-              <p className="mt-4 text-base leading-8 text-muted-foreground">Cada atendimento parte da escuta e da organização: entender o cenário, tornar as etapas compreensíveis e conduzir escolhas com responsabilidade.</p>
+              <h2 className="mt-6 text-4xl leading-tight sm:text-5xl">Uma carreira construída para <span className="italic text-accent">conduzir.</span></h2>
+              <p className="mt-7 text-base leading-8 text-muted-foreground">Desde 2015 no mercado imobiliário, Natalia construiu sua trajetória unindo experiência, estudo, estratégia e uma convicção.</p>
+              <p className="mt-4 text-base leading-8 text-muted-foreground">Intermediar um imóvel é participar de decisões que envolvem vidas, patrimônio e confiança. É por isso que cada atendimento merece preparo, clareza e presença.</p>
+              <p className="mt-6 font-display text-2xl italic">Natalia Heiderich</p>
               <WhatsAppLink message={whatsappMessages.about} variant="editorial" className="mt-8">Conheça minha trajetória</WhatsAppLink>
             </div>
           </div>
@@ -78,11 +80,7 @@ function Index() {
           <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
             <SectionLabel>Áreas de atuação</SectionLabel>
             <div className="mt-8 grid border-y border-border md:grid-cols-3">
-              {[
-                ["01", "Mercado imobiliário", "Orientação para decisões de compra, venda e relacionamento com proprietários e clientes.", whatsappMessages.realEstate, "Conhecer atuação imobiliária"],
-                ["02", "Consultorias", "Orientação prática para profissionais e empresas que desejam organizar, revisar e aprimorar seus processos.", whatsappMessages.consulting, "Conhecer consultorias"],
-                ["03", "Formação profissional", "Mentoria e cursos para corretores que desejam desenvolver autonomia, conhecimento e segurança.", whatsappMessages.career, "Conhecer formações"],
-              ].map(([number, title, text, message, action], index) => (
+              {areas.map(([number, title, text, message, action], index) => (
                 <article key={title} className={`group py-9 md:px-8 md:py-12 ${index > 0 ? "border-t border-border md:border-l md:border-t-0" : ""}`}>
                   <span className="text-xs font-semibold text-accent">{number}</span>
                   <h3 className="mt-12 text-3xl">{title}</h3>
@@ -113,6 +111,14 @@ function Index() {
           </div>
         </section>
 
+        <section className="py-20 md:py-28">
+          <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+            <SectionLabel>Carteira imobiliária</SectionLabel>
+            <div className="mt-6 flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><h2 className="text-4xl sm:text-5xl">Imóveis <span className="italic text-accent">selecionados.</span></h2><p className="mt-4 max-w-xl text-muted-foreground">Você não precisa conhecer todos os imóveis. Precisa encontrar os imóveis certos.</p></div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Conteúdo demonstrativo</p></div>
+            <div className="mt-10 grid gap-5 md:grid-cols-3">{propertyCards.map((card) => <article key={card.title} className="border border-border bg-card"><img src={card.image} width={1200} height={912} loading="lazy" alt="Imagem arquitetônica demonstrativa" className="aspect-[4/3] w-full object-cover" /><div className="p-6"><p className="text-xs uppercase tracking-[0.12em] text-accent">Conteúdo demonstrativo</p><h3 className="mt-4 text-2xl">{card.title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">Localização e disponibilidade a confirmar. Estrutura preparada para dados reais.</p><WhatsAppLink message={whatsappMessages.property} variant="link" size="sm" className="mt-5 h-auto px-0 normal-case tracking-normal">Tenho interesse</WhatsAppLink></div></article>)}</div>
+          </div>
+        </section>
+
         <section id="consultorias" className="py-20 md:py-28">
           <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-7 lg:grid-cols-2 lg:items-end"><div><SectionLabel>Consultorias</SectionLabel><h2 className="mt-6 text-4xl sm:text-5xl">Orientação para organizar e <span className="italic text-accent">aprimorar.</span></h2></div><p className="text-base leading-8 text-muted-foreground">Duas modalidades para necessidades diferentes, da análise objetiva de uma situação ao acompanhamento aprofundado de processos.</p></div>
@@ -133,8 +139,12 @@ function Index() {
 
         <section id="curso" className="py-20 md:py-28">
           <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
-            <div className="grid gap-12 border-y border-border py-12 lg:grid-cols-[0.75fr_1.25fr] lg:py-16"><div><SectionLabel>Curso gravado</SectionLabel><p className="mt-7 text-sm leading-7 text-muted-foreground">Conteúdo para consultar no seu ritmo, com fundamentos aplicáveis à rotina profissional.</p></div><div><h2 className="text-4xl leading-tight sm:text-5xl">Locação e administração imobiliária com <span className="italic text-accent">mais segurança.</span></h2><p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">Um curso para quem deseja compreender melhor os fundamentos da locação, da administração imobiliária e dos diferentes tipos de contratos utilizados no setor.</p><div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 text-sm text-muted-foreground">{["Legislação de locação", "Administração imobiliária", "Tipos de contratos", "Pontos de atenção"].map((item) => <span key={item} className="flex gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}</div><WhatsAppLink message={whatsappMessages.course} variant="editorial" className="mt-8">Quero saber mais sobre o curso</WhatsAppLink></div></div>
+            <div className="grid items-center gap-12 border-y border-border py-12 lg:grid-cols-[0.8fr_1.2fr] lg:py-16"><img src={courseAsset.url} width={768} height={1019} loading="lazy" alt="Natalia Heiderich com computador e livros" className="aspect-[4/5] max-h-[620px] w-full object-cover object-top" /><div><SectionLabel>Curso gravado</SectionLabel><h2 className="mt-6 text-4xl leading-tight sm:text-5xl">Locação e administração imobiliária com <span className="italic text-accent">mais segurança.</span></h2><p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">Um curso para quem deseja compreender melhor os fundamentos da locação, da administração imobiliária e dos diferentes tipos de contratos utilizados no setor.</p><div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 text-sm text-muted-foreground">{["Legislação de locação", "Administração imobiliária", "Tipos de contratos", "Pontos de atenção"].map((item) => <span key={item} className="flex gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}</div><WhatsAppLink message={whatsappMessages.course} variant="editorial" className="mt-8">Quero saber mais sobre o curso</WhatsAppLink></div></div>
           </div>
+        </section>
+
+        <section id="emine" className="bg-foreground py-20 text-primary-foreground md:py-28">
+          <div className="mx-auto grid max-w-[1240px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-12"><div className="bg-background p-8"><img src={emineLogoAsset.url} width={768} height={768} loading="lazy" alt="EMINÉ — Elevando o padrão imobiliário" className="mx-auto aspect-square w-full max-w-md object-contain" /></div><div><SectionLabel light>Escola de desenvolvimento profissional</SectionLabel><h2 className="mt-6 text-5xl sm:text-6xl">EMINÉ</h2><p className="mt-2 text-sm uppercase tracking-[0.16em] text-warm">Elevando o padrão imobiliário.</p><p className="mt-7 max-w-xl text-lg leading-8 text-primary-foreground/75">Escola de Desenvolvimento Profissional Imobiliário para quem quer deixar de apenas atender e aprender a conduzir.</p><blockquote className="mt-8 border-l border-warm pl-6 font-display text-2xl italic leading-relaxed">“Método não serve para engessar o corretor. Serve para dar direção.”</blockquote><WhatsAppLink message={whatsappMessages.career} variant="hero" className="mt-8">Conhecer a EMINÉ</WhatsAppLink></div></div>
         </section>
 
         <section className="bg-secondary py-20 md:py-24">
@@ -145,7 +155,7 @@ function Index() {
           <div className="mx-auto grid max-w-[1240px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.75fr_1.25fr] lg:px-12"><div><SectionLabel>Perguntas frequentes</SectionLabel><h2 className="mt-6 text-4xl leading-tight sm:text-5xl">Antes da nossa <span className="italic text-accent">conversa.</span></h2></div><Accordion.Root type="single" collapsible className="border-t border-border">{faqs.map((faq, index) => <Accordion.Item key={faq.question} value={`faq-${index}`} className="border-b border-border"><Accordion.Header><Accordion.Trigger className="group flex w-full items-center justify-between gap-5 py-6 text-left font-display text-xl focus-visible:outline-2 focus-visible:outline-accent"><span>{faq.question}</span><ChevronDown className="size-4 shrink-0 transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" /></Accordion.Trigger></Accordion.Header><Accordion.Content className="overflow-hidden text-sm leading-7 text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"><p className="pb-6 pr-8">{faq.answer}</p></Accordion.Content></Accordion.Item>)}</Accordion.Root></div>
         </section>
 
-        <section id="contato" className="bg-accent py-20 text-accent-foreground md:py-28"><div className="mx-auto max-w-4xl px-5 text-center sm:px-8"><MessageCircle className="mx-auto size-7" aria-hidden="true" /><h2 className="mt-6 text-4xl leading-tight sm:text-6xl">Vamos tornar sua próxima decisão mais <span className="italic">clara?</span></h2><p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-accent-foreground/80">Conte qual é o seu momento. A conversa começa pelo WhatsApp e segue de forma direta, próxima e personalizada.</p><WhatsAppLink message={whatsappMessages.contact} variant="hero" className="mt-9">Conversar pelo WhatsApp</WhatsAppLink></div></section>
+        <section id="contato" className="bg-accent py-20 text-accent-foreground md:py-28"><div className="mx-auto max-w-4xl px-5 text-center sm:px-8"><MessageCircle className="mx-auto size-7" aria-hidden="true" /><h2 className="mt-6 text-4xl leading-tight sm:text-6xl">Toda decisão importante merece <span className="italic">clareza.</span></h2><p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-accent-foreground/80">Conte o que você precisa e encontre o caminho de atendimento mais adequado.</p><WhatsAppLink message={whatsappMessages.general} variant="hero" className="mt-9">Falar com Natalia</WhatsAppLink></div></section>
       </main>
       <SiteFooter />
     </div>
@@ -167,12 +177,24 @@ function ServicePanel({ eyebrow, title, text, points, message }: { eyebrow: stri
 const intentions = [
   { title: "Comprar ou vender um imóvel", href: "#imoveis", message: whatsappMessages.realEstate },
   { title: "Orientação para proprietários", href: "#imoveis", message: whatsappMessages.owners },
-  { title: "Melhorar processos da empresa", href: "#consultorias", message: whatsappMessages.premiumConsulting },
+  { title: "Tenho uma demanda empresarial", href: "#consultorias", message: whatsappMessages.enterprise },
   { title: "Desenvolver minha carreira", href: "#mentoria", message: whatsappMessages.career },
   { title: "Mentoria Premium", href: "#mentoria", message: whatsappMessages.mentoring },
   { title: "Consultoria Premium", href: "#consultorias", message: whatsappMessages.premiumConsulting },
   { title: "Consultoria Rápida", href: "#consultorias", message: whatsappMessages.quickConsulting },
   { title: "Curso gravado", href: "#curso", message: whatsappMessages.course },
+];
+
+const areas: ReadonlyArray<readonly [string, string, string, string, string]> = [
+  ["01", "Mercado imobiliário", "Atuação relacionada a imóveis, compra, venda, orientação e condução de decisões imobiliárias.", whatsappMessages.realEstate, "Conhecer atuação imobiliária"],
+  ["02", "Desenvolvimento profissional", "Mentorias, formação, método e desenvolvimento de profissionais do mercado imobiliário.", whatsappMessages.career, "Conhecer formações"],
+  ["03", "Consultoria estratégica", "Orientação para empresas e profissionais que precisam de clareza, análise e direcionamento.", whatsappMessages.consulting, "Conhecer consultorias"],
+];
+
+const propertyCards = [
+  { title: "Residência contemporânea", image: consultingImage },
+  { title: "Arquitetura integrada", image: mentoringImage },
+  { title: "Interiores com luz natural", image: consultingImage },
 ];
 
 const faqs = [
