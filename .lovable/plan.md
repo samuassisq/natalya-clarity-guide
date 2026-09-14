@@ -17,7 +17,7 @@ Construir um site editorial, sofisticado e acolhedor que apresente Natalia como 
 - Montar as seções de posicionamento, apresentação da Natalia, três áreas de atuação, compra e venda, consultorias, mentoria, curso, depoimentos identificados como placeholders, perguntas frequentes, CTA final e rodapé.
 - Usar apenas afirmações fornecidas; nenhuma credencial, número, resultado ou contato será inventado.
 
-## Etapa 2 — Páginas internas
+## Etapa 2 — Páginas internas (somente após aprovação da home)
 - Criar `/sobre`, `/imoveis`, `/imoveis/$slug`, `/colunas`, `/colunas/$slug`, `/consultorias`, `/mentoria`, `/curso` e `/contato`.
 - Manter a mesma linguagem visual e navegação em todas as páginas.
 - Preparar imóveis e artigos demonstrativos, claramente rotulados, com páginas de detalhe reutilizáveis.
@@ -38,5 +38,8 @@ Construir um site editorial, sofisticado e acolhedor que apresente Natalia como 
 - Adicionar estados de interação, menu móvel acessível e animações leves com respeito à preferência de movimento reduzido.
 - Validar links, navegação, visual em desktop e celular, ausência de sobreposições e carregamento das imagens.
 
+## Entrega desta etapa
+Entregar somente a página inicial finalizada, testada e apresentada para aprovação. Nenhuma página interna, tela falsa ou integração incompleta será criada antes dessa aprovação.
+
 ## Resultado esperado
-Um site completo, confiável e estrategicamente organizado, com a página inicial como referência de acabamento e todas as páginas internas coerentes com a mesma identidade.
+Uma home confiável e estrategicamente organizada, pronta para servir como referência de acabamento às futuras páginas internas.
