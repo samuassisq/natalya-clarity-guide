@@ -7,6 +7,8 @@ export const whatsappMessages = {
   realEstate: "Olá, Natalia! Gostaria de conversar sobre compra e venda de imóveis.",
   property:
     "Olá, Natalia! Gostaria de conversar sobre compra, venda ou orientação relacionada a um imóvel.",
+  wernerPlas:
+    "Olá, Natalia! Gostaria de receber mais informações sobre o imóvel no Werner Plas.",
   owners:
     "Olá, Natalia! Sou proprietário(a) e gostaria de saber como funciona o seu atendimento para imóveis.",
   enterprise:
