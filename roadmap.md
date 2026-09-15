@@ -1,5 +1,7 @@
-- [ ] Reorganizar e condensar a home na ordem solicitada usando apenas fotos oficiais
-- [ ] Criar /imoveis com filtros funcionais e conteúdo demonstrativo identificado
-- [ ] Criar /imoveis/$slug com galeria, swipe, lightbox e WhatsApp contextual
-- [ ] Atualizar navegação, estados ativos, interações e links internos
-- [ ] Validar desktop, notebook, tablet, celular pequeno e grande
+- [ ] Remover todo conteúdo Werner Plas e cadastrar o imóvel real do Cambuí
+- [ ] Reorganizar a home conforme o novo posicionamento e remover demonstrações
+- [ ] Criar páginas públicas: Sobre, EMINÉ, Conteúdos, Depoimentos e Contato
+- [ ] Conectar Lovable Cloud com autenticação, dados e fotos protegidos
+- [ ] Criar painel privado de imóveis com cadastro, edição, fotos e publicação
+- [ ] Atualizar navegação, rodapé, WhatsApp e metadados de todas as páginas
+- [ ] Validar desktop, notebook, tablet e celulares, incluindo acessibilidade e fluxos
