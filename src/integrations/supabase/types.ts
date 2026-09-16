@@ -14,16 +14,198 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      properties: {
+        Row: {
+          approximate_location: string | null
+          bathrooms: number | null
+          bedrooms: number | null
+          city: string
+          condominium_fee: number | null
+          created_at: string
+          description: string
+          differentials: string[]
+          featured: boolean
+          features: string[]
+          id: string
+          neighborhood: string
+          parking_property_tax: number | null
+          parking_spaces: number | null
+          price: number | null
+          private_area: number | null
+          property_tax: number | null
+          property_type: string
+          published: boolean
+          purpose: Database["public"]["Enums"]["property_purpose"]
+          slug: string
+          status: Database["public"]["Enums"]["property_status"]
+          suites: number | null
+          title: string
+          total_area: number | null
+          updated_at: string
+        }
+        Insert: {
+          approximate_location?: string | null
+          bathrooms?: number | null
+          bedrooms?: number | null
+          city: string
+          condominium_fee?: number | null
+          created_at?: string
+          description: string
+          differentials?: string[]
+          featured?: boolean
+          features?: string[]
+          id?: string
+          neighborhood: string
+          parking_property_tax?: number | null
+          parking_spaces?: number | null
+          price?: number | null
+          private_area?: number | null
+          property_tax?: number | null
+          property_type: string
+          published?: boolean
+          purpose: Database["public"]["Enums"]["property_purpose"]
+          slug: string
+          status?: Database["public"]["Enums"]["property_status"]
+          suites?: number | null
+          title: string
+          total_area?: number | null
+          updated_at?: string
+        }
+        Update: {
+          approximate_location?: string | null
+          bathrooms?: number | null
+          bedrooms?: number | null
+          city?: string
+          condominium_fee?: number | null
+          created_at?: string
+          description?: string
+          differentials?: string[]
+          featured?: boolean
+          features?: string[]
+          id?: string
+          neighborhood?: string
+          parking_property_tax?: number | null
+          parking_spaces?: number | null
+          price?: number | null
+          private_area?: number | null
+          property_tax?: number | null
+          property_type?: string
+          published?: boolean
+          purpose?: Database["public"]["Enums"]["property_purpose"]
+          slug?: string
+          status?: Database["public"]["Enums"]["property_status"]
+          suites?: number | null
+          title?: string
+          total_area?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      property_photos: {
+        Row: {
+          alt_text: string
+          created_at: string
+          id: string
+          is_cover: boolean
+          property_id: string
+          sort_order: number
+          storage_path: string
+        }
+        Insert: {
+          alt_text: string
+          created_at?: string
+          id?: string
+          is_cover?: boolean
+          property_id: string
+          sort_order?: number
+          storage_path: string
+        }
+        Update: {
+          alt_text?: string
+          created_at?: string
+          id?: string
+          is_cover?: boolean
+          property_id?: string
+          sort_order?: number
+          storage_path?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "property_photos_property_id_fkey"
+            columns: ["property_id"]
+            isOneToOne: false
+            referencedRelation: "properties"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
+      property_purpose: "comprar" | "alugar"
+      property_status:
+        | "disponivel"
+        | "reservado"
+        | "vendido"
+        | "alugado"
+        | "arquivado"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +332,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+      property_purpose: ["comprar", "alugar"],
+      property_status: [
+        "disponivel",
+        "reservado",
+        "vendido",
+        "alugado",
+        "arquivado",
+      ],
+    },
   },
 } as const
